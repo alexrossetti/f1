@@ -2,7 +2,7 @@
 // displays the drivers standings for the given season
 showStandings = (year) => {
 
-    const response = fetch('http://ergast.com/api/f1/'+year+'/driverStandings.json')
+    const response = fetch('https://ergast.com/api/f1/'+year+'/driverStandings.json')
         .then(response => response.json())
         .then(data => {
             const array = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
@@ -20,7 +20,7 @@ showStandings = (year) => {
             document.getElementById('dr-standings').innerHTML += standingsTable;
         });
 
-    const teamResponse = fetch('http://ergast.com/api/f1/'+year+'/constructorStandings.json')
+    const teamResponse = fetch('https://ergast.com/api/f1/'+year+'/constructorStandings.json')
         .then(teamResponse => teamResponse.json())
         .then(data => {
             const array = data['MRData']['StandingsTable']['StandingsLists'][0]['ConstructorStandings'];
@@ -42,7 +42,7 @@ showStandings = (year) => {
 
 getRace = (year, round) => {
 
-    const response = fetch('http://ergast.com/api/f1/'+year+'/'+round+'.json')
+    const response = fetch('https://ergast.com/api/f1/'+year+'/'+round+'.json')
         .then(response => response.json())
         .then(data => {
             const array = data['MRData']['RaceTable']['Races'][0];
@@ -71,7 +71,7 @@ getRace = (year, round) => {
 
 getPreviousRace = () => {
 
-    const response = fetch('http://ergast.com/api/f1/current/last/results.json')
+    const response = fetch('https://ergast.com/api/f1/current/last/results.json')
         .then(response => response.json())
         .then(data => {
             const array = data['MRData']['RaceTable']['Races'][0];
@@ -94,7 +94,7 @@ getPreviousRace = () => {
 
 getSchedule = () => {
 
-    const response = fetch('http://ergast.com/api/f1/current.json')
+    const response = fetch('https://ergast.com/api/f1/current.json')
         .then(response => response.json())
         .then(data => {
             const array = data['MRData']['RaceTable']['Races'];
@@ -127,7 +127,7 @@ getSchedule = () => {
 // displays the drivers standings for the given season
 showAllStandings = (year) => {
 
-    const response = fetch('http://ergast.com/api/f1/'+year+'/driverStandings.json')
+    const response = fetch('https://ergast.com/api/f1/'+year+'/driverStandings.json')
         .then(response => response.json())
         .then(data => {
             const array = data['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
@@ -145,7 +145,7 @@ showAllStandings = (year) => {
         });
         
 
-    const teamResponse = fetch('http://ergast.com/api/f1/'+year+'/constructorStandings.json')
+    const teamResponse = fetch('https://ergast.com/api/f1/'+year+'/constructorStandings.json')
         .then(teamResponse => teamResponse.json())
         .then(data => {
             const array = data['MRData']['StandingsTable']['StandingsLists'][0]['ConstructorStandings'];
