@@ -1,0 +1,274 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.navbar {
+    background-color: #9b0000;
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar ul li:hover {
+    color: #ffd000;
+}
+
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+
+
+#main-page-info {
+    display: flex;
+}
+
+#race-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#standings, #race-info {
+    flex: 1;
+    display: flex;
+}
+
+#standings {
+    flex-direction: column;
+    align-items: left;
+}
+
+#dr-standings {
+    flex: 1;
+}
+
+#con-standings {
+    margin-top: 20px;
+    flex: 1;
+}
+
+#next-race, #previous-race {
+    line-height: 1.3em;
+    border: 1px solid #9b0000;
+    border-radius: 10px;
+    padding: 15px 20px;
+    flex: 1;
+    margin: 20px 0px;
+}
+
+#next-race h3, #previous-race h3 {
+    text-decoration: underline;
+}
+
+#next-race a, #previous-race a {
+    color: #d90000;
+}
+
+#next-race a:hover, #previous-race a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.table {
+    line-height: 1.2em;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: #fcf9f9;
+}
+
+.table th {
+    background-color: #9b0000;
+    color: #ffffff;
+    padding: 6px 10px;
+}
+
+.table td {
+    padding: 4px 10px;
+}
+
+
+
+
+/* css for standings.html */
+#allStandings {
+    display:flex; 
+    flex-direction: row;
+}
+
+#drivers-standings, #constructors-standings {
+    margin: 0 auto;
+}
+
+#drivers-standings h3, #constructors-standings h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+/* schedule.html */
+#race-schedule {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#raceSeason {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.race {
+    width: 25%;
+    margin: 10px;
+    padding: 15px 10px;
+    border: 1px solid #9b0000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.race:hover {
+    background-color: #fcfcfc;
+}
+
+.raceNo {
+    margin: 0px;
+    font-size: 35px;
+    flex: 2;
+    padding-left: 5px;
+}
+
+.raceInfo {
+    flex: 4;
+}
+
+.raceName {
+    color: #ff0000;
+}
+
+.raceName a:hover {
+    color: #9b0000;
+}
+
+.raceDate, .raceTime {
+    font-weight: normal;
+    font-size: 14px;
+    padding-top: 2px;
+}
+
+
+
+@media (max-width: 768px){
+
+    #main-page-info {
+        flex-direction: column-reverse;
+    }
+
+    #race-info {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #standings {
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    #dr-standings, #con-standings {
+        margin: 10px 20px 0px 20px;
+    }
+
+    #allStandings {
+        flex-direction: column;
+    }
+
+    
+    #drivers-standings, #constructors-standings {
+        margin: 0px auto 40px auto;
+    }
+
+        
+    #drivers-standings h3, #constructors-standings h3 {
+        text-align: center;
+    }    
+
+
+
+    .race {
+        width: 40%;
+    }
+
+    .raceNo {
+        flex: 3;
+    }
+    
+    .raceInfo {
+        flex: 4;
+    }
+
+
+}
+
+
+
+@media (max-width: 600px){
+
+    #dr-standings, #con-standings {
+        margin: 10px 10px 0px 10px;
+    }
+
+
+    .race {
+        width: 100%;
+    }
+
+    .raceNo {
+        flex: 2;
+    }
+
+    .raceInfo {
+        flex: 4;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #standings {
+        flex-direction: column;    
+        align-items: center;
+    }
+
+    #con-standings {
+        margin-top: 30px;
+    }
+
+}
